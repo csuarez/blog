@@ -1,14 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&family=Ultra&display=swap');
+
+/* TODO: Remove tailwind dependency */
+
+/* TODO: Move this to proper variables */
+:root {
+  /* Spacing */
+  --space-unit: 1em;
+  --space-xxs: calc(0.25 * var(--space-unit));
+  --space-xs: calc(0.5 * var(--space-unit));
+  --space-sm: calc(0.75 * var(--space-unit));
+  --space-md: calc(1.25 * var(--space-unit));
+  --space-lg: calc(2 * var(--space-unit));
+  --space-xl: calc(3.25 * var(--space-unit));
+  --space-xxl: calc(5.25 * var(--space-unit));
+
+  /* Colors */
+  --jade: #00a878ff;
+  --mindaro: #d8f1a0ff;
+  --earth-yellow: #f3c178ff;
+  --sunset: #F5CC8E;
+  --tomato: #fe5e41ff;
+  --smoky-black: #0b0500ff;
+
+  /* Fonts & text */
+  --font-family-primary: "Montserrat";
+  --font-family-secondary: "Barlow Condensed";
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* set base values */
+  --text-base-size: 1em;
+  --text-scale-ratio: 1.2;
+
+  /* type scale */
+  --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+  --text-sm: calc(1em / var(--text-scale-ratio));
+  --text-md: calc(1em * var(--text-scale-ratio));
+  --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+}
+
 html {
-  background-color: #f1f5f9;
-  font-family: sans-serif;
+  background-color: var(--earth-yellow);
+  /* TODO: Check this */
+  font-family: "Slabo 27px", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
-  padding: 1rem;
+  max-width: 100%;
   line-height: 1.5;
+  color: var(--smoky-black);
+}
+
+p {
+  font-size: var(--text-lg);
+}
+
+/* TODO: Search best solution */
+header {
+  width: 100%;
+}
+
+.content {
+  max-width: 80%;
 }
 
 * {
@@ -35,29 +108,12 @@ h1 {
   background-color: #ff9776;
 }
 
-.nav-links {
+nav {
   width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
-  display: none;
-  margin: 0;
+  background-color: var(--jade);
 }
 
-.nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
 
-.nav-links a:hover,
-.nav-links a:focus {
-  background-color: #ff9776;
-}
 
 .expanded {
   display: unset;
@@ -80,13 +136,4 @@ h1 {
   .hamburger {
     display: none;
   }
-}
-
-html.dark {
-  background-color: #0d0950;
-  color: #fff;
-}
-
-.dark .nav-links a {
-  color: #fff;
 }

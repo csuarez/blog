@@ -1,0 +1,38 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--space-lg)
+}
+
+.navigation--title {
+  font-family: "Ultra", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--text-xxxl);
+  color: var(--mindaro)
+}
+
+.navigation--links {
+  width: 100%;
+  top: 5rem;
+  left: 48px;
+  background-color: #ff9776;
+  display: none;
+  margin: 0;
+}
+
+.navigation--links a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navigation--links .navigation--links a:hover,
+.navigation--links a:focus {
+  background-color: #ff9776;
+}
