@@ -41,6 +41,7 @@
   --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
   --text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
   --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-giant: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 }
 
 html {
@@ -82,6 +83,12 @@ header {
 
 .content {
   max-width: 80%;
+}
+
+.content__title {
+  text-align: center;
+  font-size: var(--text-giant);
+  text-decoration: underline wavy var(--tomato);
 }
 
 * {
