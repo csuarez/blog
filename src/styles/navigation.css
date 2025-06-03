@@ -1,3 +1,5 @@
+/* TODO: Move this near the component */
+
 .navigation {
   display: flex;
   flex-direction: row;

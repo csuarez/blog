@@ -15,6 +15,7 @@
   --space-xxl: calc(5.25 * var(--space-unit));
 
   /* Colors */
+  /* TODO: Fix this naming */
   --jade: #00a878ff;
   --mindaro: #d8f1a0ff;
   --earth-yellow: #f3c178ff;
@@ -28,6 +29,7 @@
 
   --font-weight-regular: 400;
   --font-weight-bold: 700;
+  --font-weight-extra-bold: 1000;
 
   /* set base values */
   --text-base-size: 1em;
@@ -70,9 +72,6 @@ body {
   max-width: 100%;
   line-height: 1.5;
   color: var(--smoky-black);
-}
-
-p {
   font-size: var(--text-lg);
 }
 
