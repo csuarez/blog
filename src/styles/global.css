@@ -119,8 +119,6 @@ nav {
   background-color: var(--jade);
 }
 
-
-
 .expanded {
   display: unset;
 }
@@ -142,4 +140,18 @@ nav {
   .hamburger {
     display: none;
   }
+}
+
+a,
+a:visited {
+  color: var(--smoky-black);
+  text-decoration: underline;
+  text-decoration-color: var(--jade);
+  text-decoration-style: wavy;
+  font-weight: var(--font-weight-extra-bold);
+}
+
+a:hover,
+a:focus {
+  text-decoration-color: var(--tomato);
 }
