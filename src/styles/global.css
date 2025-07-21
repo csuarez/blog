@@ -16,12 +16,27 @@
 
   /* Colors */
   /* TODO: Fix this naming */
-  --jade: #00a878ff;
+  /* CSS HEX */
+  --delft-blue: #1d2f6fff;
+  --vista-blue: #8390faff;
+  --saffron: #fac748ff;
+  --lavender-blush: #f9e9ecff;
+  --tickle-me-pink: #f88dadff;
+
+  /* --jade: #00a878ff;
   --mindaro: #d8f1a0ff;
   --earth-yellow: #f3c178ff;
   --sunset: #F5CC8E;
   --tomato: #fe5e41ff;
-  --smoky-black: #0b0500ff;
+  --smoky-black: #0b0500ff; */
+
+  --jade: var(--delft-blue);
+  --mindaro: var(--vista-blue);
+  --earth-yellow: var(--lavender-blush);
+  --tomato: var(--tickle-me-pink);
+  --smoky-black: var(--delft-blue);
+
+
 
   /* Fonts & text */
   --font-family-primary: "Montserrat";
@@ -146,7 +161,7 @@ a,
 a:visited {
   color: var(--smoky-black);
   text-decoration: underline;
-  text-decoration-color: var(--jade);
+  text-decoration-color: var(--mindaro);
   text-decoration-style: wavy;
   font-weight: var(--font-weight-extra-bold);
 }
