@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Slabo+27px&family=Ultra&display=swap');
 
-/* TODO: Remove tailwind dependency */
-
 /* TODO: Move this to proper variables */
 :root {
   /* Spacing */
@@ -88,31 +86,37 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
   width: 100%;
   max-width: 100%;
+  min-width: fit-content;
   line-height: 1.5;
   color: var(--smoky-black);
   font-size: var(--text-lg);
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-/* TODO: Search best solution */
 header {
   width: 100%;
 }
 
 .content {
-  max-width: 80%;
+  max-width: 100%;
 }
 
+@media screen and (min-width: 768px) {
+  .content {
+    max-width: 1200px;
+  }
+}
+
+/* TODO: Move this elsewhere */
 .content__title {
   text-align: center;
   font-size: var(--text-giant);
   text-decoration: underline wavy var(--tomato);
-}
-
-* {
-  box-sizing: border-box;
 }
 
 h1 {
@@ -127,25 +131,6 @@ nav {
 
 .expanded {
   display: unset;
-}
-
-@media screen and (min-width: 636px) {
-  .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
-  }
-
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
-  }
-
-  .hamburger {
-    display: none;
-  }
 }
 
 a,
