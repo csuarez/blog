@@ -3,11 +3,26 @@ import "../styles/reset.css";
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting";
+import BlogPost from "../components/BlogPost.astro";
+import { getCollection } from "astro:content";
 
+const allPosts = await getCollection("blog");
 const pageTitle = "My Astro Site";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>My awesome blog subtitle</h2>
 	<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+	<ul>
+		{
+			allPosts.map((post: any) => (
+				<BlogPost
+					url={`/${post.id}/`}
+					title={post.data.title}
+					description={post.data.description}
+					date={post.data.date}
+				/>
+			))
+		}
+	</ul>
 </BaseLayout>
