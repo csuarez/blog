@@ -1,11 +1,19 @@
 /* TODO: Check nesting */
 
-.post-content>p:first-of-type::first-letter {
-  font-weight: var(--font-weight-extra-bold);
-  font-size: 100px;
-  line-height: 0;
-}
-
 .post-content {
   margin-top: var(--space-xl);
+
+  &>p:first-of-type::first-letter {
+    font-weight: var(--font-weight-extra-bold);
+    font-size: 100px;
+    line-height: 0;
+  }
+}
+
+.post-date {
+  font-size: var(--text-lg);
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--primary-light-color);
 }

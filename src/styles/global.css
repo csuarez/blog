@@ -138,16 +138,18 @@ table {
   font-size: var(--text-xxl);
 }
 
-.content h1 {
-  font-size: var(--text-giant);
-}
+.content {
+  & h1 {
+    font-size: var(--text-giant);
+  }
 
-.content h2 {
-  font-size: var(--text-xxxl);
-}
+  & h2 {
+    font-size: var(--text-xxxl);
+  }
 
-.content h3 {
-  font-size: var(--text-xl);
+  & h3 {
+    font-size: var(--text-xl);
+  }
 }
 
 @media screen and (min-width: 768px) {
