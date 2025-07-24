@@ -19,7 +19,7 @@
   font-family: "Ultra", serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--mindaro);
+  color: var(--primary-light-color);
   line-height: 1.8em;
   text-align: center;
 }
@@ -32,7 +32,7 @@
 
 .navigation--subtitle {
   font-size: var(--text-xl);
-  color: var(--saffron);
+  color: var(--accent-color);
 }
 
 .navigation--title h1 {
@@ -59,11 +59,11 @@
   font-size: 1.2rem;
   font-weight: bolder;
   text-transform: lowercase;
-  color: var(--tomato);
+  color: var(--secondary-color);
   font-size: var(--text-xl);
 }
 
 .navigation--links a:hover,
 .navigation--links a:focus {
-  color: var(--saffron)
+  color: var(--accent-color)
 }
