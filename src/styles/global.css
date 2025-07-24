@@ -32,11 +32,9 @@
   --screen-lg-min: 992px;
   --screen-xl-min: 1200px;
 
-
-
   /* Fonts & text */
-  --font-family-primary: "Montserrat";
-  --font-family-secondary: "Barlow Condensed";
+  --font-family-primary: "Slabo 27px", serif;
+  --font-family-secondary: "Ultra", serif;
 
   --font-weight-regular: 400;
   --font-weight-bold: 700;
@@ -69,8 +67,7 @@
 
 html {
   background-color: var(--light-color);
-  /* TODO: Check this */
-  font-family: "Slabo 27px", serif;
+  font-family: var(--font-family-primary);
   font-weight: 400;
   font-style: normal;
 }
@@ -78,7 +75,7 @@ html {
 h1,
 h2,
 h3 {
-  font-family: "Ultra", serif;
+  font-family: var(--font-family-secondary);
   font-weight: 400;
   font-style: normal;
   margin-bottom: var(--space-sm);
@@ -123,22 +120,7 @@ header {
 .content {
   max-width: 100%;
   padding: var(--space-lg);
-}
 
-@media screen and (min-width: 768px) {
-  .content {
-    max-width: 1200px;
-  }
-}
-
-.content p,
-ul,
-ol,
-table {
-  font-size: var(--text-xxl);
-}
-
-.content {
   & h1 {
     font-size: var(--text-giant);
   }
@@ -150,40 +132,40 @@ table {
   & h3 {
     font-size: var(--text-xl);
   }
-}
 
-@media screen and (min-width: 768px) {
-
-  .content p,
+  & p,
   ul,
   ol,
   table {
-    font-size: var(--text-xl);
-  }
-
-  .content h2 {
     font-size: var(--text-xxl);
-  }
-
-  .content h3 {
-    font-size: var(--text-lg);
   }
 }
 
-/* TODO: Move this elsewhere */
+@media screen and (min-width: 768px) {
+  .content {
+    max-width: 1200px;
+
+    & p,
+    ul,
+    ol,
+    table {
+      font-size: var(--text-xl);
+    }
+
+    & h2 {
+      font-size: var(--text-xxl);
+    }
+
+    & h3 {
+      font-size: var(--text-lg);
+    }
+  }
+}
+
 .content__title {
   text-align: center;
   font-size: var(--text-xxxl);
   text-decoration: underline wavy var(--secondary-color);
-}
-
-nav {
-  width: 100%;
-  background-color: var(--primary-color);
-}
-
-.expanded {
-  display: unset;
 }
 
 a,
