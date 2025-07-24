@@ -101,7 +101,8 @@ p {
   margin-bottom: var(--space-sm);
 }
 
-ul {
+ul,
+ol {
   margin-bottom: var(--space-sm);
   padding-left: var(--space-lg);
 }
