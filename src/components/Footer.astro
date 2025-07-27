@@ -4,14 +4,20 @@ import Social from "./Social.astro";
 
 <style>
   footer {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+    font-style: italic;
+    font-size: var(--text-sm);
+    padding-bottom: var(--spacing-md);
   }
 </style>
 
 <footer>
-  <Social platform="twitter" username="astrodotbuild" />
+  Una web de <a href="/about">tharandur</a>. Todos los textos está licenciado
+  con <a
+    href="https://creativecommons.org/licenses/by/4.0/"
+    target="_blank"
+    rel="noopener noreferrer">Creative Commons</a
+  >.
+  <!-- <Social platform="twitter" username="astrodotbuild" />
   <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" />
+  <Social platform="youtube" username="astrodotbuild" /> -->
 </footer>
