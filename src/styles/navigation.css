@@ -21,9 +21,10 @@ nav {
   font-family: var(--font-family-secondary);
   font-weight: 400;
   font-style: normal;
-  color: var(--primary-light-color);
+  color: var(--primary-light-color) !important;
   line-height: 1.8em;
   text-align: center;
+  text-decoration: none;
 
   & h1 {
     font-size: var(--text-xxxxl);
