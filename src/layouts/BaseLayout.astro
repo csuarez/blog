@@ -19,7 +19,7 @@ const { pageTitle } = Astro.props;
     <div class="main-wrapper">
       <Header />
       <div class="content">
-        <h1 class="content__title">{pageTitle}</h1>
+        {pageTitle && <h1 class="content__title">{pageTitle}</h1>}
         <slot />
       </div>
     </div>

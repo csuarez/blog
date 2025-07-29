@@ -17,11 +17,9 @@ const postsByYear = allPosts.reduce((acc: any, post: any) => {
 	acc[year].push(post);
 	return acc;
 }, {});
-
-const pageTitle = "My Astro Site";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout>
 	<h2>Artículos</h2>
 
 	{
