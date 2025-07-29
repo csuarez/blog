@@ -8,8 +8,6 @@ import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("blog");
 
-// Get posts as an array is the year of the post and the value an array of the posts fors the given year
-
 const postsByYear = allPosts.reduce((acc: any, post: any) => {
 	const year = new Date(post.data.pubDate).getFullYear();
 
@@ -19,8 +17,6 @@ const postsByYear = allPosts.reduce((acc: any, post: any) => {
 	acc[year].push(post);
 	return acc;
 }, {});
-
-// console.log(postsByYear);
 
 const pageTitle = "My Astro Site";
 ---
