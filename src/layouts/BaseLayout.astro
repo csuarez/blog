@@ -4,6 +4,8 @@ import Footer from "../components/Footer.astro";
 import "../styles/reset.css";
 import "../styles/global.css";
 const { pageTitle } = Astro.props;
+
+const defaultTitle = "Un blog random de tharandur";
 ---
 
 <!-- TODO: Change this depending the post -->
@@ -13,7 +15,7 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <title>{pageTitle ?? defaultTitle}</title>
   </head>
   <body>
     <div class="main-wrapper">
