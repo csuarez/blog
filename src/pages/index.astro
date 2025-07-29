@@ -7,22 +7,45 @@ import BlogPost from "../components/BlogPost.astro";
 import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("blog");
+
+// Get posts as an array is the year of the post and the value an array of the posts fors the given year
+
+const postsByYear = allPosts.reduce((acc: any, post: any) => {
+	const year = new Date(post.data.pubDate).getFullYear();
+
+	if (!acc[year]) {
+		acc[year] = [];
+	}
+	acc[year].push(post);
+	return acc;
+}, {});
+
+// console.log(postsByYear);
+
 const pageTitle = "My Astro Site";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h2>My awesome blog subtitle</h2>
-	<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
-	<ul>
-		{
-			allPosts.map((post: any) => (
-				<BlogPost
-					url={`/${post.id}/`}
-					title={post.data.title}
-					description={post.data.description}
-					date={post.data.date}
-				/>
+	<h2>Artículos</h2>
+
+	{
+		Object.entries(postsByYear)
+			//  TODO: Check this typing errors
+			.sort((a, b) => b[0] - a[0])
+			.map(([year, posts]) => (
+				<section>
+					<h3>{year}</h3>
+					<ul>
+						{posts.map((post: any) => (
+							<BlogPost
+								url={`/${post.id}/`}
+								title={post.data.title}
+								description={post.data.description}
+								date={post.data.date}
+							/>
+						))}
+					</ul>
+				</section>
 			))
-		}
-	</ul>
+	}
 </BaseLayout>
