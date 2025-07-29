@@ -1,7 +1,14 @@
 ---
-const { url, title } = Astro.props;
+import "../styles/reset.css";
+import "../styles/global.css";
+import "../styles/blog-post.css";
+
+const { url, title, description } = Astro.props;
 ---
 
-<li>
-  <a href={url}>{title}</a>
+<li class="blog-post">
+  <a class="blog-post__title" href={url}>{title}</a>
+  <p class="blog-post__description">
+    {description}
+  </p>
 </li>

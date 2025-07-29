@@ -1,0 +1,9 @@
+.post-list__year {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .post-list__year {
+    display: block;
+  }
+}

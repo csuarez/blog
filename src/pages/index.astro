@@ -1,6 +1,8 @@
 ---
 import "../styles/reset.css";
 import "../styles/global.css";
+import "../styles/index.css";
+
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting";
 import BlogPost from "../components/BlogPost.astro";
@@ -20,17 +22,16 @@ const postsByYear = allPosts.reduce((acc: any, post: any) => {
 ---
 
 <BaseLayout>
-	<h2>Artículos</h2>
-
 	{
 		Object.entries(postsByYear)
 			//  TODO: Check this typing errors
 			.sort((a, b) => b[0] - a[0])
 			.map(([year, posts]) => (
-				<section>
-					<h3>{year}</h3>
+				<section class="post-list">
+					<h3 class="post-list__year">{year}</h3>
 					<ul>
 						{posts.map((post: any) => (
+							// TODO: Rename this to PostSummary or similar
 							<BlogPost
 								url={`/${post.id}/`}
 								title={post.data.title}
