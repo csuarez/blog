@@ -4,9 +4,9 @@ import "../styles/global.css";
 import "../styles/index.css";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Greeting from "../components/Greeting";
 import BlogPost from "../components/BlogPost.astro";
 import { getCollection } from "astro:content";
+import Welcome from "../components/Welcome.astro";
 
 const allPosts = await getCollection("blog");
 
@@ -22,6 +22,7 @@ const postsByYear = allPosts.reduce((acc: any, post: any) => {
 ---
 
 <BaseLayout>
+	<Welcome />
 	{
 		Object.entries(postsByYear)
 			//  TODO: Check this typing errors
