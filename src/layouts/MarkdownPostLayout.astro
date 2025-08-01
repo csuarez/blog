@@ -6,7 +6,7 @@ import "./post-layout.css";
 
 <BaseLayout pageTitle={frontmatter.title}>
   <p class="post-date">{frontmatter.pubDate.toLocaleDateString()}</p>
-  <div class="post-content">
+  <main class="post-content">
     <slot />
-  </div>
+  </main>
 </BaseLayout>
