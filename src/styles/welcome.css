@@ -72,7 +72,7 @@
 
 .welcome__description {
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   color: var(--secondary-light-color);
   font-size: var(--text-xxl);
 }
@@ -80,6 +80,7 @@
 @media screen and (min-width: 768px) {
   .welcome__description {
     flex-direction: row;
+    text-align: left;
     font-size: var(--text-md);
   }
 }

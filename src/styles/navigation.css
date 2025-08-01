@@ -48,8 +48,15 @@ nav {
 }
 
 .navigation--subtitle {
-  font-size: var(--text-xl);
+  font-size: var(--text-xxxl);
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .navigation--subtitle {
+    font-size: var(--text-xl);
+    color: var(--accent-color);
+  }
 }
 
 .navigation--links {

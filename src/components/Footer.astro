@@ -5,20 +5,26 @@ import Social from "./Social.astro";
 <style>
   footer {
     font-style: italic;
-    font-size: var(--text-sm);
-    padding-bottom: var(--spacing-md);
+    font-size: var(--text-xl);
+    text-align: center;
+    padding-bottom: var(--spacing-xxl);
+    padding-top: var(--spacing-xxl);
+  }
+
+  @media screen and (min-width: 768px) {
+    footer {
+      font-size: var(--text-sm);
+    }
   }
 </style>
 
 <footer>
-  Una web de <a href="/about">tharandur</a>. Todos los textos está licenciado
-  con <a
-    href="https://creativecommons.org/licenses/by/4.0/"
-    target="_blank"
-    rel="noopener noreferrer">Creative Commons</a
-  >.
-  <!-- TODO: Remove this -->
-  <!-- <Social platform="twitter" username="astrodotbuild" />
-  <Social platform="github" username="withastro" />
-  <Social platform="youtube" username="astrodotbuild" /> -->
+  <p>
+    Una web de <a href="/about">tharandur</a>. Todos los textos está licenciado
+    con <a
+      href="https://creativecommons.org/licenses/by/4.0/"
+      target="_blank"
+      rel="noopener noreferrer">Creative Commons</a
+    >.
+  </p>
 </footer>

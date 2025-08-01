@@ -23,7 +23,7 @@ ul:has(.blog-post) {
 }
 
 .blog-post__title {
-  font-size: var(--text-xxl);
+  font-size: var(--text-xl);
 }
 
 @media screen and (min-width: 768px) {
@@ -33,7 +33,7 @@ ul:has(.blog-post) {
 }
 
 .blog-post .blog-post__description {
-  font-size: var(--text-lg);
+  font-size: var(--text-md);
   font-style: italic;
 }
 
