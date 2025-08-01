@@ -6,8 +6,8 @@ export async function GET(context) {
   const posts = await getCollection("blog");
 
   return rss({
-    title: 'Astro Learner | Blog',
-    description: 'My journey learning Astro',
+    title: 'tharandur.sbs',
+    description: 'Un blog random de lo que se me va ocurriendo.',
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,
@@ -15,6 +15,6 @@ export async function GET(context) {
       description: post.data.description,
       link: `/posts/${post.id}/`,
     })),
-    customData: `<language>en-us</language>`,
+    customData: `<language>es-ES</language>`,
   });
 }
