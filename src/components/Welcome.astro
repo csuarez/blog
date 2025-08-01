@@ -1,123 +1,24 @@
 ---
 import "../styles/reset.css";
 import "../styles/global.css";
+import "../styles/welcome.css";
 import { Image } from "astro:assets";
 import avatarImage from "../../img/avatar.png";
 ---
 
-<!-- TODO: Clean this -->
 <div class="welcome">
   <Image
     class="welcome__avatar"
     src={avatarImage}
-    alt="Welcome Image"
+    alt="tharandur cartoon avatar"
     width="300"
     height="300"
   />
   <div>
-    <h2>¡Hola!</h2>
-    <p>
-      Aquí encontrarás una colección de artículos sobre tecnología, cultura y lo
-      qué se me vaya ocurriendo. Espero que los disfrutes tanto como a mi me ha
-      gustado escribirlos.
+    <h2 class="welcome__title">¡Hola!</h2>
+    <p class="welcome__description">
+      Aquí encontrarás una colección de artículos lo qué se me vaya ocurriendo.
+      Espero que los disfrutes tanto como a mi me ha gustado escribirlos.
     </p>
-    <!-- <ul>
-      <li>
-        <a href="#">Aquí puedes saber más sobre mí</a>
-        <li><a href="#">Y aquí sobre mis motivaciones</a></li>
-      </li>
-    </ul> -->
   </div>
-
-  <style>
-    .welcome {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      gap: var(--space-md);
-      margin-bottom: var(--space-lg);
-      background-color: var(--primary-light-color);
-      padding: var(--space-md);
-      /* padding: 20px; */
-      /* background-color: var(--accent-color); */
-      /* border: 5px dashed var(--secondary-color); */
-      border-radius: 24px;
-    }
-
-    .welcome__avatar {
-      background-color: var(--accent-color);
-
-      --s: 300px; /* adjust to control the size */
-
-      /* TODO: Comment source */
-      width: var(--s);
-      aspect-ratio: 1;
-      --g: /calc(var(--s) * 0.175) calc(var(--s) * 0.175) radial-gradient(
-          50% 50%,
-          #000 99%,
-          #0000 101%
-        ) no-repeat;
-      mask:
-        calc(50% + var(--s) * 0.386) calc(50% + var(--s) * 0) var(--g),
-        calc(50% + var(--s) * 0.334) calc(50% + var(--s) * 0.193) var(--g),
-        calc(50% + var(--s) * 0.193) calc(50% + var(--s) * 0.334) var(--g),
-        calc(50% + var(--s) * 0) calc(50% + var(--s) * 0.386) var(--g),
-        calc(50% + var(--s) * -0.193) calc(50% + var(--s) * 0.334) var(--g),
-        calc(50% + var(--s) * -0.334) calc(50% + var(--s) * 0.193) var(--g),
-        calc(50% + var(--s) * -0.386) calc(50% + var(--s) * 0) var(--g),
-        calc(50% + var(--s) * -0.334) calc(50% + var(--s) * -0.193) var(--g),
-        calc(50% + var(--s) * -0.193) calc(50% + var(--s) * -0.334) var(--g),
-        calc(50% + var(--s) * 0) calc(50% + var(--s) * -0.386) var(--g),
-        calc(50% + var(--s) * 0.193) calc(50% + var(--s) * -0.334) var(--g),
-        calc(50% + var(--s) * 0.334) calc(50% + var(--s) * -0.193) var(--g),
-        radial-gradient(calc(var(--s) * 0.448), #000 99%, #0000 101%) subtract,
-        calc(50% + var(--s) * 0.5) calc(50% + var(--s) * 0.134) var(--g),
-        calc(50% + var(--s) * 0.366) calc(50% + var(--s) * 0.366) var(--g),
-        calc(50% + var(--s) * 0.134) calc(50% + var(--s) * 0.5) var(--g),
-        calc(50% + var(--s) * -0.134) calc(50% + var(--s) * 0.5) var(--g),
-        calc(50% + var(--s) * -0.366) calc(50% + var(--s) * 0.366) var(--g),
-        calc(50% + var(--s) * -0.5) calc(50% + var(--s) * 0.134) var(--g),
-        calc(50% + var(--s) * -0.5) calc(50% + var(--s) * -0.134) var(--g),
-        calc(50% + var(--s) * -0.366) calc(50% + var(--s) * -0.366) var(--g),
-        calc(50% + var(--s) * -0.134) calc(50% + var(--s) * -0.5) var(--g),
-        calc(50% + var(--s) * 0.134) calc(50% + var(--s) * -0.5) var(--g),
-        calc(50% + var(--s) * 0.366) calc(50% + var(--s) * -0.366) var(--g),
-        calc(50% + var(--s) * 0.5) calc(50% + var(--s) * -0.134) var(--g);
-    }
-
-    @media screen and (min-width: 768px) {
-      .welcome {
-        flex-direction: row;
-      }
-    }
-
-    .welcome h2 {
-      font-size: var(--text-xxxl);
-      text-align: center;
-      margin-bottom: 0;
-      color: var(--accent-color);
-    }
-
-    @media screen and (min-width: 768px) {
-      .welcome h2 {
-        text-align: left;
-        font-size: var(--text-xl);
-      }
-    }
-
-    .welcome p {
-      font-weight: bold;
-      text-align: left;
-      color: var(--secondary-light-color);
-      font-size: var(--text-xxl);
-    }
-
-    @media screen and (min-width: 768px) {
-      .welcome p {
-        flex-direction: row;
-        font-size: var(--text-md);
-      }
-    }
-  </style>
 </div>

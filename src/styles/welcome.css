@@ -1,0 +1,85 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  background-color: var(--primary-light-color);
+  padding: var(--space-md);
+  border-radius: 24px;
+}
+
+.welcome__avatar {
+  background-color: var(--accent-color);
+
+  --s: 300px;
+  /* adjust to control the size */
+
+  /* Source: https://css-generators.com/wavy-circle/ */
+  width: var(--s);
+  aspect-ratio: 1;
+  --g: /calc(var(--s) * 0.175) calc(var(--s) * 0.175) radial-gradient(50% 50%,
+      #000 99%,
+      #0000 101%) no-repeat;
+  mask:
+    calc(50% + var(--s) * 0.386) calc(50% + var(--s) * 0) var(--g),
+    calc(50% + var(--s) * 0.334) calc(50% + var(--s) * 0.193) var(--g),
+    calc(50% + var(--s) * 0.193) calc(50% + var(--s) * 0.334) var(--g),
+    calc(50% + var(--s) * 0) calc(50% + var(--s) * 0.386) var(--g),
+    calc(50% + var(--s) * -0.193) calc(50% + var(--s) * 0.334) var(--g),
+    calc(50% + var(--s) * -0.334) calc(50% + var(--s) * 0.193) var(--g),
+    calc(50% + var(--s) * -0.386) calc(50% + var(--s) * 0) var(--g),
+    calc(50% + var(--s) * -0.334) calc(50% + var(--s) * -0.193) var(--g),
+    calc(50% + var(--s) * -0.193) calc(50% + var(--s) * -0.334) var(--g),
+    calc(50% + var(--s) * 0) calc(50% + var(--s) * -0.386) var(--g),
+    calc(50% + var(--s) * 0.193) calc(50% + var(--s) * -0.334) var(--g),
+    calc(50% + var(--s) * 0.334) calc(50% + var(--s) * -0.193) var(--g),
+    radial-gradient(calc(var(--s) * 0.448), #000 99%, #0000 101%) subtract,
+    calc(50% + var(--s) * 0.5) calc(50% + var(--s) * 0.134) var(--g),
+    calc(50% + var(--s) * 0.366) calc(50% + var(--s) * 0.366) var(--g),
+    calc(50% + var(--s) * 0.134) calc(50% + var(--s) * 0.5) var(--g),
+    calc(50% + var(--s) * -0.134) calc(50% + var(--s) * 0.5) var(--g),
+    calc(50% + var(--s) * -0.366) calc(50% + var(--s) * 0.366) var(--g),
+    calc(50% + var(--s) * -0.5) calc(50% + var(--s) * 0.134) var(--g),
+    calc(50% + var(--s) * -0.5) calc(50% + var(--s) * -0.134) var(--g),
+    calc(50% + var(--s) * -0.366) calc(50% + var(--s) * -0.366) var(--g),
+    calc(50% + var(--s) * -0.134) calc(50% + var(--s) * -0.5) var(--g),
+    calc(50% + var(--s) * 0.134) calc(50% + var(--s) * -0.5) var(--g),
+    calc(50% + var(--s) * 0.366) calc(50% + var(--s) * -0.366) var(--g),
+    calc(50% + var(--s) * 0.5) calc(50% + var(--s) * -0.134) var(--g);
+}
+
+@media screen and (min-width: 768px) {
+  .welcome {
+    flex-direction: row;
+  }
+}
+
+.welcome__title {
+  font-size: var(--text-xxxl);
+  text-align: center;
+  margin-bottom: 0;
+  color: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .welcome__title {
+    text-align: left;
+    font-size: var(--text-xl);
+  }
+}
+
+.welcome__description {
+  font-weight: bold;
+  text-align: left;
+  color: var(--secondary-light-color);
+  font-size: var(--text-xxl);
+}
+
+@media screen and (min-width: 768px) {
+  .welcome__description {
+    flex-direction: row;
+    font-size: var(--text-md);
+  }
+}
