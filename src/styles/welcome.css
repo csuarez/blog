@@ -13,10 +13,8 @@
 .welcome__avatar {
   background-color: var(--accent-color);
 
-  --s: 300px;
-  /* adjust to control the size */
-
   /* Source: https://css-generators.com/wavy-circle/ */
+  --s: 300px;
   width: var(--s);
   aspect-ratio: 1;
   --g: /calc(var(--s) * 0.175) calc(var(--s) * 0.175) radial-gradient(50% 50%,
