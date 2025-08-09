@@ -176,6 +176,7 @@ header {
   text-align: center;
   font-size: var(--text-xxxl);
   text-decoration: underline wavy var(--secondary-color);
+  text-underline-offset: 0.1em;
 }
 
 a,
@@ -184,6 +185,7 @@ a:visited {
   text-decoration: underline;
   text-decoration-color: var(--primary-light-color);
   text-decoration-style: wavy;
+  text-underline-offset: 0.1em;
   font-weight: var(--font-weight-extra-bold);
 }
 
