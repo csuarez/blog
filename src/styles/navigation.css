@@ -75,7 +75,8 @@ nav {
   }
 
   & a:hover,
-  a:focus {
+  a:focus,
+  a:visited {
     color: var(--accent-color)
   }
 }
