@@ -31,7 +31,7 @@ const postsByYear = allPosts.reduce((acc: any, post: any) => {
 				<section class="post-list">
 					<h3 class="post-list__year">{year}</h3>
 					<ul>
-						{posts.map((post: any) => (
+						{posts.reverse().map((post: any) => (
 							// TODO: Rename this to PostSummary or similar
 							<BlogPost
 								url={`/${post.id}/`}
