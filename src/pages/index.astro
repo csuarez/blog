@@ -10,7 +10,14 @@ import Welcome from "../components/Welcome.astro";
 
 const allPosts = await getCollection("blog");
 
-const postsByYear = allPosts.reduce((acc: any, post: any) => {
+// Sort posts by date (newest first)
+const sortedPosts = allPosts.sort(
+	(a, b) =>
+		new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
+);
+
+// TODO: Remove these any types
+const postsByYear = sortedPosts.reduce((acc: any, post: any) => {
 	const year = new Date(post.data.pubDate).getFullYear();
 
 	if (!acc[year]) {
@@ -31,13 +38,13 @@ const postsByYear = allPosts.reduce((acc: any, post: any) => {
 				<section class="post-list">
 					<h3 class="post-list__year">{year}</h3>
 					<ul>
-						{posts.reverse().map((post: any) => (
+						{posts.map((post: any) => (
 							// TODO: Rename this to PostSummary or similar
 							<BlogPost
 								url={`/${post.id}/`}
 								title={post.data.title}
 								description={post.data.description}
-								date={post.data.date}
+								date={post.data.pubDate}
 							/>
 						))}
 					</ul>
