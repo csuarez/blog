@@ -26,7 +26,7 @@ const postsByYear = allPosts.reduce((acc: any, post: any) => {
 	{
 		Object.entries(postsByYear)
 			//  TODO: Check this typing errors
-			.sort((a, b) => b[0] - a[0])
+			.sort((a, b) => Number(b[0]) - Number(a[0]))
 			.map(([year, posts]) => (
 				<section class="post-list">
 					<h3 class="post-list__year">{year}</h3>
