@@ -158,7 +158,7 @@ header {
     ul,
     ol,
     table {
-      font-size: var(--text-xl);
+      font-size: var(--text-lg);
     }
 
     & h2 {
