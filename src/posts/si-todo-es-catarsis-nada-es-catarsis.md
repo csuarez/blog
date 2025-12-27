@@ -1,6 +1,6 @@
 ---
 title: 'Si todo es catarsis, nada es catarsis'
-pubDate: 2025-09-26
+pubDate: 2025-11-10
 description: 'Pensamientos a raíz del disco Iconoclasts de Anna Von Hausswolff'
 author: 'Astro Learner'
 image:
