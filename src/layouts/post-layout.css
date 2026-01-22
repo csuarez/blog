@@ -12,6 +12,8 @@
     max-height: 500px;
     display: block;
     margin: var(--space-sm) auto;
+    border-radius: var(--border-radius);
+    border: 3px solid var(--primary-light-color);
   }
 }
 
