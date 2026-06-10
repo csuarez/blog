@@ -3,9 +3,11 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/reset.css";
 import "../styles/global.css";
-const { pageTitle } = Astro.props;
+const { pageTitle, ogImage, description } = Astro.props;
 
 const defaultTitle = "Un blog random de tharandur";
+const siteUrl = Astro.site ?? "https://tharandur.sbs";
+const fullOgImageUrl = ogImage ? new URL(ogImage, siteUrl).toString() : new URL("/android-chrome-512x512.png", siteUrl).toString(); // Fallback to a large icon if no post image
 ---
 
 <!-- TODO: Change this depending the post -->
@@ -19,6 +21,19 @@ const defaultTitle = "Un blog random de tharandur";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle ?? defaultTitle}</title>
+
+    {description && <meta name="description" content={description} />}
+    
+    <meta property="og:title" content={pageTitle ?? defaultTitle} />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content={fullOgImageUrl} />
+    {description && <meta property="og:description" content={description} />}
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle ?? defaultTitle} />
+    {description && <meta name="twitter:description" content={description} />}
+    <meta name="twitter:image" content={fullOgImageUrl} />
   </head>
   <body>
     <div class="main-wrapper">
