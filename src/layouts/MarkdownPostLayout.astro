@@ -1,10 +1,14 @@
 ---
-const { frontmatter } = Astro.props;
+const { frontmatter, ogImage } = Astro.props;
 import BaseLayout from "./BaseLayout.astro";
 import "./post-layout.css";
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout 
+  pageTitle={frontmatter.title} 
+  ogImage={ogImage} 
+  description={frontmatter.description}
+>
   <p class="post-date">{frontmatter.pubDate.toLocaleDateString()}</p>
   <main class="post-content">
     <slot />

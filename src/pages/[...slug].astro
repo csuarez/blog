@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import MarkdownPostLayout from "../layouts/MarkdownPostLayout.astro";
+import { getImage } from "astro:assets";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -11,9 +12,39 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+
+// Extract first image from markdown body
+const imageRegex = /!\[.*?\]\((.*?)\)/;
+const match = post.body?.match(imageRegex);
+let ogImage = null;
+
+if (match) {
+  const firstImagePath = match[1];
+  if (firstImagePath.startsWith('../images/')) {
+    // Resolve relative path to project root path for import.meta.glob
+    const resolvedPath = firstImagePath.replace('../images/', '/src/images/');
+    
+    // Get all images from src/images
+    const images = import.meta.glob<{ default: ImageMetadata }>('/src/images/**/*.{jpeg,jpg,png,gif,webp,JPG,JPEG,PNG,WEBP}');
+    
+    if (images[resolvedPath]) {
+      const imageModule = await images[resolvedPath]();
+      const optimizedImage = await getImage({ src: imageModule.default, format: 'webp' });
+      ogImage = optimizedImage.src;
+    }
+  } else if (firstImagePath.startsWith('http')) {
+    ogImage = firstImagePath;
+  }
+}
+
+// Fallback to frontmatter image if no image found in body or if it's the default one
+if (!ogImage && post.data.image?.url && !post.data.image.url.includes('docs.astro.build')) {
+    ogImage = post.data.image.url;
+}
+
 const { Content } = await render(post);
 ---
 
-<MarkdownPostLayout frontmatter={post.data}>
+<MarkdownPostLayout frontmatter={post.data} ogImage={ogImage}>
   <Content />
 </MarkdownPostLayout>
