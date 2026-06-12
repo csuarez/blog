@@ -1,0 +1,34 @@
+---
+title: 'Odio Mixtape'
+pubDate: 2026-06-12
+description: 'Todos mis problemas con el juego que le gusta a todo el mundo'
+author: 'Astro Learner'
+image:
+    url: 'https://docs.astro.build/assets/rose.webp'
+    alt: 'The Astro logo on a dark background with a pink glow.'
+tags: ["astro", "blogging", "learning in public"]
+---
+
+![How do you do fellow kids](../images/steve-buscemi.jpg)
+
+Stacy, protagonista de [**Mixtape**](https://mixtape.game/), es una friki de la música que se va a mudar a New York para convertirse en supervisora musical. Antes de irse, pasará una última noche de parranda con sus amigos del pueblo, para la cual ha preparado una cuidada selección de hits de los 80 y 90\. La promoción de la obra ha girado mucho en torno a esta playlist, totalmente irresistible para cualquier nerd indie millenial que se precie: ***Portishead***, ***The Smashing Pumpkins***, ***The Cure***, ***Joy Division***, ***Siouxsie and the Banshees***, etc. Un juego que sobre el papel debería ser 100% mi mierda (no solo por su banda sonora, sino también por ser un indie pintón narrativo y un *coming of age*, cosas que me pirran), pero que ha resultado ser una de las experiencias videojueguiles que más me han frustrado últimamente.
+
+Primero porque falla como experiencia narrativa interesante. Su exposición de elementos nostálgicos es casi pornográfica y no puedes parar de imaginar a los creadores dándote con el codito de manera insistente mientras repiten “*¿te has fijado que son los 90? ¿te acuerdas cuando dabas para atrás a una cinta de cassette con un boli? ¿EH? ¿TE ACUERDAS?*”. Esa sutileza se extiende a toda la historia. ¿Que la prota se pone triste? Filtro de blanco y negro y a llover aunque estemos en verano. ¿Los personajes se vienen arriba con un temazo? Pues que salgan flotando (cosa que no ocurre ni una, ni dos, ni tres, ni cuatro veces… ¡hasta **CINCO** veces ocurre en 3 horas escasas\!). Y así continuamente.
+
+A pesar de esto podría contar algo interesante, pero nos encontramos con una historia de adolescentes sin mucho que aportar al enorme corpus que existe sobre el tema. Da especial rabia porque se siente como una oportunidad perdida, ya que a veces se intuyen temas que le hubiesen dado un toque distintivo a su discurso pero de los que parece huir para no complicarse demasiado la vida. Por ejemplo, ***Hartmut Rosa*** en su libro [**Lo indisponible**](https://herdereditorial.com/catalogo/filosofia/lo-indisponible-9788425444227) dice:
+
+> Esa forma de vida que denominamos “moderna” es la idea, el anhelo y el deseo de poner el mundo a disponibilidad. La vivacidad, la conmoción y la verdadera experiencia, sin embargo, surge del encuentro con lo indisponible. Un mundo totalmente conocido, planeado y dominado sería un mundo muerto. \[...\]. La vida ocurre como un interjuego entre lo disponible y aquello que permanece indisponible pero “nos importa”; acontece, por decirlo de algún modo, en esta línea fronteriza.
+
+Es un tema complejo de abordar, especialmente en un videojuego. Y aunque la idea asoma de alguna manera en **Mixtape**, por desgracia el título siempre decide tirar de tópicos.
+
+Aun con todo esto, podría estar en paz con este título, como lo puedo estar con la primera temporada de **Stranger Things**, aceptando que es un entretenimiento que luce pintón, que tiene buen ritmo y al que tampoco hay que darle más vueltas. Pero es que Mixtape se presenta como una carta de amor a la música alternativa de los 80 y 90, a los *busiest music nerds*, a la gente que usa la palabra *shoegaze* al menos una vez por semana. Y eso sí que no, porque Mixtape es la típica comodificación del underground anglosajón de la época. Y lo que es peor, lo hace de una manera artera. No es Steve Buscemi con dos patinetes y una gorra para atrás pasándose por alguien guay; es una *industry plant* que se intenta hacer pasar por algo auténtico en el que probablemente sea el medio cultural más inmaduro: el videojuego.
+
+Me explico: como decía al principio, Stacy quiere ser “supervisora musical” (una suerte de consultora que recomienda qué canciones pegarían en obras como una película). No quiere ser crítica cultural, ni ser periodista musical, ni tener un fanzine, ni trabajar en un sello, ni cubrir conciertos o festivales como fotógrafa. No quiere dar a conocer grupos underground, ni expandir escenas locales, ni ser parte de la estructura social y cultural de las bandas que tanto adora. Stacy quiere ser una intermediaria de la industria musical y tratar las canciones como si fuesen *assets*, tal como hace Mixtape. Porque aunque la selección de temas es buena, es enteramente para todos los públicos y se echa de menos algo que sea desafiante para el jugador-oyente, característica fundamental el cancionero menos comercial. Al juego en numerosas ocasiones se le ve esa falta de ambición: los protagonistas hablan todo el rato de si algo es “*metal*” o no, y sin embargo no hay ningún tema del género. O cuando todo se tuerce y la prota se cabrea porque “*ya no pegan **Swans***”, empieza una escena que refleja ese enfado mientras suena ***Love*** de **The Smashing Pumpkins**. ¿Los abrasivos Swans no tienen ningún tema que capture ese estado de ánimo? ¿O es que el estudio no ha tenido huevos/ovarios y sólo quería hacer un poco de *name-dropping*?
+
+Probablemente haya sido un poco duro con esta obra, porque sinceramente no creo que esté hecha con mala intención. El estudio ha dicho en entrevistas que simplemente cogieron unas canciones que les molaban y prepararon un juego donde estas fuesen la banda sonora. Pero es decepcionante que un estudio “indie” con tantos recursos bajo el paraguas de ***Annapurna*** sólo aspire a hacer un producto de nostalgia insípido. Y que todas estas cuestiones hayan pasado por debajo del radar de la crítica videojueguil da mucho que pensar.
+
+Para evitar que el texto quede demasiado destructivo, una serie de obras que hacen lo que **Mixtape** ni quiere ni puede:
+
+* [**Nuestro grupo podría ser tu vida**](https://editorialcontra.com/producto/nuestro-grupo-podria-ser-tu-vida/) de ***Michael Azerrad*** es una carta de amor a la música underground americana de los 80 y 90 y un entusiasta homenaje a toda la gente que hizo posible la escena que terminó fermentando en el boom del grunge. No veréis a una “supervisora musical” nombrada en sus páginas.  
+* [**Despelote**](https://despelote.game/) es un videojuego que usa un fenómeno social, en este caso el fútbol, para tratar sobre la nostalgia y cómo deforma nuestros recuerdos. Donde Mixtape naufraga, Despelote no encuentra más que brillantes hallazgos tanto en el contenido como en el continente. Su fracaso comercial es otra muestra de que todavía hay mucho camino que recorrer en esto de los jueguitos.  
+* [***Old Friends***](https://genius.com/Pinegrove-old-friends-lyrics) de **Pinegrove** es una preciosa canción sobre esas amistades de toda la vida que dejamos atrás.
