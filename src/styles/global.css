@@ -201,6 +201,7 @@ blockquote {
   margin-bottom: var(--space-md);
   position: relative;
   overflow: hidden;
+  font-style: italic;
 
   &::before,
   &::after {
