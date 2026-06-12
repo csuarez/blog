@@ -15,6 +15,10 @@
     border-radius: var(--border-radius);
     border: 3px solid var(--primary-light-color);
   }
+
+  li+li {
+    margin-top: var(--space-md);
+  }
 }
 
 .post-date {
