@@ -212,7 +212,8 @@ blockquote {
     margin: 0;
   }
 
-  p+p {
+  p+p,
+  li+li {
     margin-top: var(--space-md);
   }
 
