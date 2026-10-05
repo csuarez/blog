@@ -1,6 +1,6 @@
 # tharandur.sbs
 
-Personal blog in Spanish, built with Astro 5 as a fully static site and deployed on Netlify (no `netlify.toml`; Netlify runs `npm run build` and publishes `dist/`). Node version is pinned in `.nvmrc`.
+Personal blog in Spanish, built with Astro as a fully static site and deployed on Netlify (no `netlify.toml`; Netlify runs `npm run build` and publishes `dist/`). Node version is pinned in `.nvmrc`.
 
 ## Philosophy
 
