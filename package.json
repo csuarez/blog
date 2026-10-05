@@ -15,5 +15,10 @@
     "satori": "^0.26.0",
     "satori-html": "^0.3.2",
     "sharp": "^0.33.5"
+  },
+  "allowScripts": {
+    "sharp": true,
+    "esbuild": true,
+    "fsevents": true
   }
 }
