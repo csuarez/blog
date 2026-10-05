@@ -18,7 +18,7 @@ Subject line only, lowercase, starting with an imperative verb: `add mixtape pos
 
 - Posts live in `src/posts/*.md`, one file per post. The filename is the URL slug (`/odio-mixtape/`), served by `src/pages/[...slug].astro`.
 - Frontmatter is `title`, `pubDate`, `description` and an optional `tags` array, validated by the schema in `src/content.config.js`. Add a field there before using it in a post.
-- The devlog for The Long Way Round is not a separate collection. A post with `tags: ['the-long-way-round']` is listed on `/the-long-way-round/` (`src/pages/the-long-way-round/index.astro`), gets a `devlog` label on the home list and a back link in its date line. The tag, title and URL live in `DEVLOG` in `src/consts.js`. The index intro is `src/posts/_the-long-way-round.md`, kept out of the collection by the leading underscore.
+- The devlog for The Long Way Round is not a separate collection. A post with `tags: ['the-long-way-round']` is listed on `/the-long-way-round/` (`src/pages/the-long-way-round/index.astro`) and gets a back link in its date line. There is no header link to the index yet. The tag, title and URL live in `DEVLOG` in `src/consts.js`. The index intro is `src/posts/_the-long-way-round.md`, kept out of the collection by the leading underscore.
 - Post images go in `src/images/` and are referenced from markdown as `../images/name.jpg`. Each post gets a generated Open Graph card at `/og/<slug>.png` whose background is the first image in the body, so lead with the image you want shared.
 - Prose, UI strings and `alt` text are Spanish. Code, comments and commits are English.
 
