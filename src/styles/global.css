@@ -57,6 +57,7 @@
 
   /* other */
   --border-radius: 10px;
+  --transition-duration: 0.2s;
 }
 
 *,
@@ -229,5 +230,22 @@ blockquote {
     width: 5px;
     height: 100%;
     background-color: var(--primary-light-color);
+  }
+}
+/* Cross-document view transitions: cross-fade between pages on navigation.
+   Pure CSS, no client-side router. Browsers without support (Firefox as of
+   late 2026) fall back to a regular navigation. */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: var(--transition-duration);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
   }
 }
