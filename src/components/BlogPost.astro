@@ -3,11 +3,12 @@ import "../styles/reset.css";
 import "../styles/global.css";
 import "../styles/blog-post.css";
 
-const { url, title, description } = Astro.props;
+const { url, title, description, label } = Astro.props;
 ---
 
 <li class="blog-post">
   <a class="blog-post__title" href={url}>{title}</a>
+  {label && <span class="blog-post__label">{label}</span>}
   <p class="blog-post__description">
     {description}
   </p>

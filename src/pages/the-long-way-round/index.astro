@@ -1,0 +1,35 @@
+---
+import "../../styles/reset.css";
+import "../../styles/global.css";
+import "../../styles/index.css";
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPost from "../../components/BlogPost.astro";
+import { Content as Intro } from "../../posts/_the-long-way-round.md";
+import { getCollection } from "astro:content";
+import { DEVLOG } from "../../consts";
+
+const description = `Devlog de ${DEVLOG.title}, el juego que estoy haciendo.`;
+
+const entries = (await getCollection("blog", (post) =>
+  post.data.tags.includes(DEVLOG.tag),
+)).sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<BaseLayout pageTitle={DEVLOG.title} description={description}>
+  <Intro />
+  <section class="post-list">
+    <ul>
+      {
+        entries.map((post) => (
+          <BlogPost
+            url={`/${post.id}/`}
+            title={post.data.title}
+            description={post.data.description}
+            date={post.data.pubDate}
+          />
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>

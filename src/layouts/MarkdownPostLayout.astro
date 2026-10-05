@@ -1,7 +1,10 @@
 ---
 const { frontmatter, ogImage } = Astro.props;
 import BaseLayout from "./BaseLayout.astro";
+import { DEVLOG } from "../consts";
 import "./post-layout.css";
+
+const isDevlog = frontmatter.tags?.includes(DEVLOG.tag);
 ---
 
 <BaseLayout
@@ -10,7 +13,10 @@ import "./post-layout.css";
   description={frontmatter.description}
   type="article"
 >
-  <p class="post-date">{frontmatter.pubDate.toLocaleDateString()}</p>
+  <p class="post-date">
+    {isDevlog && <><a href={DEVLOG.url}>{DEVLOG.title}</a> · </>}
+    {frontmatter.pubDate.toLocaleDateString()}
+  </p>
   <main class="post-content">
     <slot />
   </main>

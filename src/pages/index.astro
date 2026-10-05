@@ -7,6 +7,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
 import { getCollection } from "astro:content";
 import Welcome from "../components/Welcome.astro";
+import { DEVLOG } from "../consts";
 
 const allPosts = await getCollection("blog");
 
@@ -45,6 +46,7 @@ const postsByYear = sortedPosts.reduce((acc: any, post: any) => {
 								title={post.data.title}
 								description={post.data.description}
 								date={post.data.pubDate}
+								label={post.data.tags.includes(DEVLOG.tag) ? "devlog" : undefined}
 							/>
 						))}
 					</ul>
