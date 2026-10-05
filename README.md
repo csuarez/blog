@@ -33,13 +33,30 @@ Images go in `src/images/` and are referenced with a relative path. The first im
 
 The home page groups posts by year, newest first. An RSS feed is generated at `/rss.xml`, and an Open Graph PNG for each post at `/og/<slug>.png`.
 
+## Writing a devlog entry
+
+The devlog for The Long Way Round lives at `/the-long-way-round/`. Its entries are ordinary posts: same folder, same URL at `/<slug>/`, same appearance, listed on the home page and in the feed like any other. What makes a post part of the devlog is the tag in its frontmatter:
+
+```md
+---
+title: 'Devlog #1: empezando The Long Way Round'
+pubDate: 2026-10-05
+description: 'Primeros pasos del juego'
+tags: ['the-long-way-round']
+---
+```
+
+A tagged post is listed on `/the-long-way-round/` and gets a link back to that page next to its date. The intro text at the top of the devlog page is `src/posts/_the-long-way-round.md`; the leading underscore keeps it out of the post list, so edit it freely. The tag name, page title and URL are defined once in `src/consts.js`.
+
+There is no link to the devlog page in the header yet.
+
 ## Layout
 
 ```
 src/
 ├── posts/        markdown posts (the content collection)
 ├── images/       post images
-├── pages/        routes: index, about, [slug], rss.xml, og/[slug].png
+├── pages/        routes: index, about, [slug], the-long-way-round, rss.xml, og/[slug].png
 ├── layouts/      BaseLayout and the post layout
 ├── components/   header, navigation, footer, welcome box, post summary
 ├── styles/       global tokens, reset, one stylesheet per component
