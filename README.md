@@ -1,47 +1,56 @@
-# Astro Starter Kit: Minimal
+# tharandur.sbs
+
+Source of [tharandur.sbs](https://tharandur.sbs), a personal blog in Spanish. Built with [Astro](https://astro.build) as a static site, styled with plain CSS, deployed on Netlify.
+
+## Running it
+
+Requires the Node version in `.nvmrc`.
 
 ```sh
-npm create astro@latest -- --template minimal
+npm install
+npm run dev       # local server at http://localhost:4321
+npm run build     # static output in dist/
+npm run preview   # serve dist/ locally
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Writing a post
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Create a markdown file in `src/posts/`. The filename becomes the URL, so `src/posts/odio-mixtape.md` is served at `/odio-mixtape/`.
 
-## 🚀 Project Structure
+```md
+---
+title: 'Odio Mixtape'
+pubDate: 2026-06-12
+description: 'Todos mis problemas con el juego que le gusta a todo el mundo'
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+![Alt text](../images/steve-buscemi.jpg)
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+Body of the post.
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Images go in `src/images/` and are referenced with a relative path. The first image in the body is used as the post's social preview. Astro optimizes images at build time.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+The home page groups posts by year, newest first. An RSS feed is generated at `/rss.xml`, and an Open Graph PNG for each post at `/og/<slug>.png`.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Layout
 
-## 🧞 Commands
+```
+src/
+├── posts/        markdown posts (the content collection)
+├── images/       post images
+├── pages/        routes: index, about, [slug], rss.xml, og/[slug].png
+├── layouts/      BaseLayout and the post layout
+├── components/   header, navigation, footer, welcome box, post summary
+├── styles/       global tokens, reset, one stylesheet per component
+└── fonts/        Ultra, used to render OG images
+public/           favicons and web manifest, copied as-is
+```
 
-All commands are run from the root of the project, from a terminal:
+## Deploying
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Netlify builds `main` on every push with `npm run build` and publishes `dist/`. There is no Netlify config in the repo; the site settings live in the Netlify dashboard.
 
-## 👀 Want to learn more?
+## License
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Texts are licensed under [Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/).
