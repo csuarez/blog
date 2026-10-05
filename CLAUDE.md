@@ -18,7 +18,7 @@ Subject line only, lowercase, starting with an imperative verb: `add mixtape pos
 
 - Posts live in `src/posts/*.md`, one file per post. The filename is the URL slug (`/odio-mixtape/`), served by `src/pages/[...slug].astro`.
 - Frontmatter is exactly `title`, `pubDate` and `description`, validated by the schema in `src/content.config.js`. Add a field there before using it in a post.
-- Post images go in `src/images/` and are referenced from markdown as `../images/name.jpg`. The first image in the body becomes the post's Open Graph image, so lead with the image you want shared.
+- Post images go in `src/images/` and are referenced from markdown as `../images/name.jpg`. Each post gets a generated Open Graph card at `/og/<slug>.png` whose background is the first image in the body, so lead with the image you want shared.
 - Prose, UI strings and `alt` text are Spanish. Code, comments and commits are English.
 
 ## Styling
@@ -28,3 +28,7 @@ Subject line only, lowercase, starting with an imperative verb: `add mixtape pos
 - Class naming is BEM-ish: `block__element` (`.welcome__avatar`, `.blog-post__title`). CSS nesting is used freely.
 - One stylesheet per component in `src/styles/`, imported from the component. A `<style>` block inside an `.astro` file is only for rules that belong to that file alone.
 - Fonts are Google Fonts (Slabo 27px for body, Ultra for headings), loaded from `global.css`.
+
+## Backlog
+
+Pending improvements are listed in `TODO.md`. Check it before proposing new work on metadata, fonts or dependencies.
