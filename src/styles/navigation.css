@@ -88,6 +88,7 @@ nav {
 
 @media screen and (min-width: 768px) {
   .navigation--links {
-    display: block;
+    display: flex;
+    gap: var(--space-lg);
   }
 }
