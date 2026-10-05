@@ -75,16 +75,22 @@ export const GET = async ({ props }: { props: any }) => {
   const font = getFontData();
 
   // 3. Define Markup
-  const markup = html`
+  // The tagged-template form escapes interpolated strings as text, so the
+  // markup is assembled as a plain string and parsed in one go. Post fields
+  // are escaped by hand since they land inside raw HTML.
+  const escape = (s: string) =>
+    s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+  const markup = html(`
     <div style="height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #1d2f6f; font-family: 'Ultra'; color: #f9e9ec; position: relative;">
       ${ogImageBase64 ? `<img src="${ogImageBase64}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.3;" />` : ''}
       <div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center; width: 100%; padding: 60px;">
         <div style="font-size: 24px; margin-bottom: 20px; color: #f88dad; text-transform: uppercase;">tharandur.sbs</div>
-        <div style="font-size: 72px; margin-bottom: 20px; line-height: 1.1; display: flex;">${post.data.title}</div>
-        <div style="font-size: 32px; color: #fac748; display: flex;">${post.data.description}</div>
+        <div style="font-size: 72px; margin-bottom: 20px; line-height: 1.1; display: flex;">${escape(post.data.title)}</div>
+        <div style="font-size: 32px; color: #fac748; display: flex;">${escape(post.data.description)}</div>
       </div>
     </div>
-  `;
+  `);
 
   // 4. Generate SVG
   const svg = await satori(markup, {
