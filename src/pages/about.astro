@@ -6,9 +6,10 @@ import { Image } from "astro:assets";
 import avatarImage from "../../img/avatar.png";
 
 const pageTitle = "Sobre mí";
+const description = "Quién es tharandur y dónde encontrarle.";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} description={description}>
   <div class="avatar-wrapper">
     <Image
       class="avatar"

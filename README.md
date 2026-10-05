@@ -29,7 +29,7 @@ description: 'Todos mis problemas con el juego que le gusta a todo el mundo'
 Body of the post.
 ```
 
-Images go in `src/images/` and are referenced with a relative path. The first image in the body is used as the post's social preview. Astro optimizes images at build time.
+Images go in `src/images/` and are referenced with a relative path. The first image in the body becomes the background of the post's social preview card. Astro optimizes images at build time.
 
 The home page groups posts by year, newest first. An RSS feed is generated at `/rss.xml`, and an Open Graph PNG for each post at `/og/<slug>.png`.
 

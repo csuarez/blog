@@ -1,13 +1,14 @@
 
 import rss from '@astrojs/rss';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 
 export async function GET(context) {
   const posts = await getCollection("blog");
 
   return rss({
-    title: 'tharandur.sbs',
-    description: 'Un blog random de lo que se me va ocurriendo.',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,

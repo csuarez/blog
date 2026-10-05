@@ -4,10 +4,11 @@ import BaseLayout from "./BaseLayout.astro";
 import "./post-layout.css";
 ---
 
-<BaseLayout 
-  pageTitle={frontmatter.title} 
-  ogImage={ogImage} 
+<BaseLayout
+  pageTitle={frontmatter.title}
+  ogImage={ogImage}
   description={frontmatter.description}
+  type="article"
 >
   <p class="post-date">{frontmatter.pubDate.toLocaleDateString()}</p>
   <main class="post-content">

@@ -1,16 +1,24 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import "../styles/reset.css";
 import "../styles/global.css";
-const { pageTitle, ogImage, description } = Astro.props;
+
+const {
+  pageTitle,
+  ogImage,
+  description = SITE_DESCRIPTION,
+  type = "website",
+} = Astro.props;
 
 const defaultTitle = "Un blog random de tharandur";
-const siteUrl = Astro.site ?? "https://tharandur.sbs";
-const fullOgImageUrl = ogImage ? new URL(ogImage, siteUrl).toString() : new URL("/android-chrome-512x512.png", siteUrl).toString(); // Fallback to a large icon if no post image
+const siteUrl = Astro.site ?? new URL("https://tharandur.sbs");
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const rssUrl = new URL("/rss.xml", siteUrl).toString();
+const fullOgImageUrl = new URL(ogImage ?? "/android-chrome-512x512.png", siteUrl).toString();
 ---
 
-<!-- TODO: Change this depending the post -->
 <html lang="es">
   <head>
     <meta charset="utf-8" />
@@ -21,18 +29,19 @@ const fullOgImageUrl = ogImage ? new URL(ogImage, siteUrl).toString() : new URL(
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle ?? defaultTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={rssUrl} />
 
-    {description && <meta name="description" content={description} />}
-    
     <meta property="og:title" content={pageTitle ?? defaultTitle} />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={fullOgImageUrl} />
-    {description && <meta property="og:description" content={description} />}
-    
+    <meta property="og:description" content={description} />
+
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle ?? defaultTitle} />
-    {description && <meta name="twitter:description" content={description} />}
+    <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={fullOgImageUrl} />
   </head>
   <body>
