@@ -2,11 +2,6 @@
 title: '¿Por qué abrir un blog en 2025?'
 pubDate: 2025-09-26
 description: 'Las motivaciones para liarme a hacer esta web'
-author: 'Astro Learner'
-image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["astro", "blogging", "learning in public"]
 ---
 Hubo un momento que todo era (casi) perfecto. Google (una empresa que seguía el lema de *don’t be evil*) te daba acceso justo a lo que querías, llevándote a webs en las que se notaba que había un ser humano detrás. Te dirigía también a foros y blogs de micronicho, donde apasionados de los temas más variados ofrecían guías y recomendaciones por amor al arte. Te registrabas en esos foros y pasabas las horas discutiendo sobre tus obsesiones con frikis de tu nivel. Añadías los blogs que descubrías a tu Google Reader para no perderte ninguna actualización. A lo mejor hasta te animabas a hacerte tú mismo un blog, total, estaba tirado. Todo un flujo de contenido asíncrono, hecho para ser leído cuando mejor te viniese, sin presiones, sin limitaciones de tiempo o espacio. Se formaban pequeñas comunidades donde surgían peleas pero también amistades para toda la vida. En muchos blogs, lo personal se filtraba en los posts temáticos y llegabas a tener verdadero aprecio por sus autores. Uno de los mejores ejemplos de cómo el altruismo y el colectivismo sacan lo mejor del ser humano.
 

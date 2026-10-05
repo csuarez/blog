@@ -2,11 +2,6 @@
 title: 'Mi 2025... en cómics'
 pubDate: 2025-12-27
 description: 'Repasando las lecturas comiqueras del año'
-author: 'Astro Learner'
-image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["astro", "blogging", "learning in public"]
 ---
 
 Como todos los años, mis lecturas comiqueras no se han encuadrado tanto en las novedades editoriales como en lo que me ha ido dando la gana leer. No sé si es la edad, pero ya uno va viendo como todos los meses te intentan colocar supuestos clásicos contemporáneos que no son tales o prometedores números 1 de colecciones que luego se desinflan. Así que de unos años para acá mi estrategia es esperar a que los *FOMOs* se asienten y a ver qué pasa. Dicho esto, vayamos por partes:

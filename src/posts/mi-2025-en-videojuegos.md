@@ -2,11 +2,6 @@
 title: 'Mi 2025... en videojuegos'
 pubDate: 2025-12-29
 description: 'Repasando los jueguitos de este año'
-author: 'Astro Learner'
-image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["astro", "blogging", "learning in public"]
 ---
 
 Otro año ha pasado y otro año que he podido jugar bastante más de lo que esperaba. Empecé con la intención de jugar a muchos eternos pendientes, que la vida son dos días, pero eso me ha llevado a unas cuantas decepciones. Vayamos por partes…

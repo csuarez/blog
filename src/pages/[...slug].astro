@@ -37,11 +37,6 @@ if (match) {
   }
 }
 
-// Fallback to frontmatter image if no image found in body or if it's the default one
-if (!ogImage && post.data.image?.url && !post.data.image.url.includes('docs.astro.build')) {
-    ogImage = post.data.image.url;
-}
-
 const { Content } = await render(post);
 ---
 

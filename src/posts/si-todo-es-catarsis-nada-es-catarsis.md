@@ -2,11 +2,6 @@
 title: 'Si todo es catarsis, nada es catarsis'
 pubDate: 2025-11-10
 description: 'Pensamientos a raíz del disco Iconoclasts de Anna Von Hausswolff'
-author: 'Astro Learner'
-image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["astro", "blogging", "learning in public"]
 ---
 
 Jamás pensé que iba a volver a escribir sobre música, pero aquí estamos: llevo unos días dándole vueltas a [***Iconoclasts***](https://annavonhausswolff.bandcamp.com/album/iconoclasts), el nuevo disco de **Anna Von Hausswolff**, y quería poner en algún sitio los pensamientos que me está generando. Hace años escribía este tipo de textos en [**SuicideByStar**](http://suicidebystar.com), pero cambiamos la web para albergar solo podcasts, así que voy a aprovechar este espacio, [que para algo lo monté](https://tharandur.sbs/por-que-abrir-un-blog-en-2025/).

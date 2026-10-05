@@ -2,11 +2,6 @@
 title: 'Odio Mixtape'
 pubDate: 2026-06-12
 description: 'Todos mis problemas con el juego que le gusta a todo el mundo'
-author: 'Astro Learner'
-image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["astro", "blogging", "learning in public"]
 ---
 
 ![How do you do fellow kids](../images/steve-buscemi.jpg)
