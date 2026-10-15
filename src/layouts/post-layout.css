@@ -3,7 +3,9 @@
 
   &>p:first-of-type::first-letter {
     font-weight: var(--font-weight-extra-bold);
-    font-size: 100px;
+    /* 100px at the default root font size, but scales with the reader's
+       browser font-size setting */
+    font-size: 6.25rem;
     line-height: 0;
   }
 
