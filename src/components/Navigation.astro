@@ -1,11 +1,15 @@
 ---
 import "../styles/navigation.css";
+
+// The site name is the h1 only on the home page; everywhere else the page
+// title rendered by BaseLayout is the one h1.
+const isHome = Astro.url.pathname === "/";
 ---
 
 <div class="navigation">
   <a class="navigation--title" href="/" aria-label="Inicio">
     <div class="navigation--subtitle">un blog random de</div>
-    <h1>tharandur.sbs</h1>
+    {isHome ? <h1>tharandur.sbs</h1> : <span>tharandur.sbs</span>}
   </a>
   <div class="navigation--links">
     <a href="/about/">¿quién?</a>
