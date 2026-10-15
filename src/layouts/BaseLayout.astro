@@ -28,7 +28,7 @@ const fullOgImageUrl = new URL(ogImage ?? "/android-chrome-512x512.png", siteUrl
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle ?? defaultTitle}</title>
+    <title>{pageTitle ? `${pageTitle} · tharandur.sbs` : defaultTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" type="application/rss+xml" title={SITE_TITLE} href={rssUrl} />
