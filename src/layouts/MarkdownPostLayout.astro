@@ -15,7 +15,15 @@ const isDevlog = frontmatter.tags?.includes(DEVLOG.tag);
 >
   <p class="post-date">
     {isDevlog && <><a href={DEVLOG.url}>{DEVLOG.title}</a> · </>}
-    {frontmatter.pubDate.toLocaleDateString()}
+    <time datetime={frontmatter.pubDate.toISOString().split("T")[0]}>
+      {
+        frontmatter.pubDate.toLocaleDateString("es-ES", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric",
+        })
+      }
+    </time>
   </p>
   <article class="post-content">
     <slot />
