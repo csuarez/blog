@@ -39,7 +39,9 @@ nav {
   text-align: center;
   text-decoration: none;
 
-  & h1 {
+  & h1,
+  & span {
+    display: block;
     font-size: var(--text-xxxxl);
     margin: 0;
     padding: 0;

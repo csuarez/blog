@@ -74,16 +74,16 @@ Me rindo ante la evidencia: este es uno de los trabajos de indie más estimulant
 
 Tengo hecho un top 20 que hice para las votaciones internas de top de [SuicideByStar](https://suicidebystar.com) pero no quiero dar la chapa más de lo necesario, así que ahí va sin comentario para lxs más curiosxs:
 
-11\. **Lucy Gooch** \- ***Desert Window***  
-12\. **Billy Woods** \- ***GOLLIWOG***  
-13\. **Honningbarna** \- ***Soft Spot***  
-14\. **EZEZEZ** \- ***Kabakriba***  
-15\. **betcover\!\!** \- ***勇気***  
-16\. **The Callous Daboys** \- ***I Don't Want to See You in Heaven***  
-17\. **Niños del Cerro** \- ***Alma Tadema***  
-18\. **caroline** \- ***caroline 2***  
-19\. **Martröð** \- ***Draumsýnir eldsins***  
-20\. **Deftones** \- ***Private Music***  
+11. **Lucy Gooch** - ***Desert Window***
+12. **Billy Woods** - ***GOLLIWOG***
+13. **Honningbarna** - ***Soft Spot***
+14. **EZEZEZ** - ***Kabakriba***
+15. **betcover!!** - ***勇気***
+16. **The Callous Daboys** - ***I Don't Want to See You in Heaven***
+17. **Niños del Cerro** - ***Alma Tadema***
+18. **caroline** - ***caroline 2***
+19. **Martröð** - ***Draumsýnir eldsins***
+20. **Deftones** - ***Private Music***
 
 ## Fuera de la actualidad
 

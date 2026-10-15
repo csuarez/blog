@@ -1,9 +1,27 @@
-.post-list__year {
-  display: none;
+/* Visually hidden below 768px, but still announced by screen readers so the
+   post list keeps its year grouping on mobile. The .content prefix outweighs
+   the .content h2 type-scale rule, keeping the size this class sets. */
+.content .post-list__year {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  font-size: var(--text-xl);
 }
 
 @media screen and (min-width: 768px) {
-  .post-list__year {
-    display: block;
+  .content .post-list__year {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0 0 var(--space-sm);
+    overflow: visible;
+    clip-path: none;
+    white-space: normal;
+    font-size: var(--text-lg);
   }
 }
