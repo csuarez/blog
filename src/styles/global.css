@@ -110,7 +110,6 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  min-width: fit-content;
   max-width: 100vw;
   line-height: 1.5;
   color: var(--dark-color);
@@ -156,7 +155,8 @@ header {
 
 @media screen and (min-width: 768px) {
   .content {
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
 
     & p,
     ul,
