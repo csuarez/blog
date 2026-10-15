@@ -7,7 +7,7 @@ const isHome = Astro.url.pathname === "/";
 ---
 
 <div class="navigation">
-  <a class="navigation--title" href="/" aria-label="Inicio">
+  <a class="navigation--title" href="/">
     <div class="navigation--subtitle">un blog random de</div>
     {isHome ? <h1>tharandur.sbs</h1> : <span>tharandur.sbs</span>}
   </a>

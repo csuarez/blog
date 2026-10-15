@@ -17,7 +17,7 @@ const isDevlog = frontmatter.tags?.includes(DEVLOG.tag);
     {isDevlog && <><a href={DEVLOG.url}>{DEVLOG.title}</a> · </>}
     {frontmatter.pubDate.toLocaleDateString()}
   </p>
-  <main class="post-content">
+  <article class="post-content">
     <slot />
-  </main>
+  </article>
 </BaseLayout>

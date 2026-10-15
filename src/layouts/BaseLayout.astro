@@ -47,10 +47,10 @@ const fullOgImageUrl = new URL(ogImage ?? "/android-chrome-512x512.png", siteUrl
   <body>
     <div class="main-wrapper">
       <Header />
-      <div class="content">
+      <main id="main" class="content">
         {pageTitle && <h1 class="content__title">{pageTitle}</h1>}
         <slot />
-      </div>
+      </main>
     </div>
     <Footer />
   </body>
