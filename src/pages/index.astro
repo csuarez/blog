@@ -36,7 +36,7 @@ const postsByYear = sortedPosts.reduce((acc: any, post: any) => {
 			.sort((a, b) => Number(b[0]) - Number(a[0]))
 			.map(([year, posts]) => (
 				<section class="post-list">
-					<h3 class="post-list__year">{year}</h3>
+					<h2 class="post-list__year">{year}</h2>
 					<ul>
 						{posts.map((post: any) => (
 							// TODO: Rename this to PostSummary or similar
