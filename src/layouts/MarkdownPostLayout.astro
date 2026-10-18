@@ -25,6 +25,18 @@ const isDevlog = frontmatter.tags?.includes(DEVLOG.tag);
       }
     </time>
   </p>
+  {
+    frontmatter.translatable && (
+      <p class="post-translation">
+        <a
+          lang="en"
+          href={`https://tharandur-sbs.translate.goog${Astro.url.pathname}?_x_tr_sl=es&_x_tr_tl=en`}
+        >
+          Read in English
+        </a>
+      </p>
+    )
+  }
   <article class="post-content">
     <slot />
   </article>

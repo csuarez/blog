@@ -24,6 +24,14 @@
   }
 }
 
+/* Google Translate link under the date pill, shown on posts with
+   `translatable: true` in their frontmatter */
+.post-date + .post-translation {
+  font-size: var(--text-md);
+  font-style: italic;
+  text-align: center;
+}
+
 .post-date {
   font-size: var(--text-lg);
   text-align: center;
